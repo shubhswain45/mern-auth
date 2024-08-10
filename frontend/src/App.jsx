@@ -7,10 +7,10 @@ import EmailVerificationPage from './pages/EmailVerificationPage'
 import { Toaster } from 'react-hot-toast'
 import { useAuthStore } from './store/authStore'
 import HomePage from './pages/HomePage'
-import Dahsboardpage from './pages/Dahsboardpage'
 import LoadingSpinner from './components/LoadingSpinner'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
+import DashboardPage from './pages/DahsboardPage'
 
 // protect routes that require authentication
 const ProtectedRoute = ({ children }) => {
@@ -61,7 +61,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<ProtectedRoute>
-          <Dahsboardpage />
+          <DashboardPage />
         </ProtectedRoute>} />
         <Route path='/signup' element={<RedirectAuthenticatedUser>
           <SignupPage />
